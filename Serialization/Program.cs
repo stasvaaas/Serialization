@@ -1,4 +1,4 @@
-﻿using System.Runtime.Serialization;
+using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using Newtonsoft.Json;
 
@@ -35,8 +35,8 @@ namespace Serialization
             }
 
             //3. Binary to JSON
-            string des = JsonConvert.SerializeObject(pers);
-            Console.WriteLine(des);
+            string deserialized = JsonConvert.SerializeObject(pers);
+            Console.WriteLine(deserialized);
 
             //4.JSON to Person
             Person deserializedPerson = JsonConvert.DeserializeObject<Person>(des);
