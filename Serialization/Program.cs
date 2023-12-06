@@ -14,11 +14,11 @@ namespace Serialization
 
         public static void Converter(Person person)
         {
-            //1.to JSON
+            //1.Person to JSON
             string json = JsonConvert.SerializeObject(person);
             Console.WriteLine(json);
 
-            //2.ToString Binary
+            //2.JSON To Binary
             IFormatter formatter = new BinaryFormatter();
             byte[] serializedData;
             using (MemoryStream memoryStream = new MemoryStream())
